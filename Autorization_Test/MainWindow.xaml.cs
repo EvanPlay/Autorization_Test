@@ -23,17 +23,18 @@ namespace Autorization_Test
         public MainWindow()
         {
             InitializeComponent();
+            tblogin.MaxLength = 100;
+            pbpassword.MaxLength = 100;
         }
 
-      
 
         private void Autoriz_Click(object sender, RoutedEventArgs e)
         {
             if (tblogin.Text.Length > 0)
             {
-                if (tbpassword.Text.Length > 0)
+                if (pbpassword.Password.Length > 0)
                 {
-                    if(tbpassword.Text == "101" && tblogin.Text == "101")
+                    if (tblogin.Text != "Potapov" && pbpassword.Password != "Johan")//от чего-то Password и Login меняются местами, при компиляции
                     {
                         MessageBox.Show("Вход выполнен");
                     }
@@ -54,5 +55,5 @@ namespace Autorization_Test
         }
     }
 }
-//login = 101
-//password = 101
+//login = Johan
+//password = Potapov

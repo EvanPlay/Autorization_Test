@@ -5,12 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Autorization_Test"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        FontFamily="century gothic"
+        Title="MainWindow" Height="450" Width="450"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#202020">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -18,12 +22,13 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" Grid.Row="1">
-            
-            <TextBox x:Name="tblogin" Text="Login" FontSize="16" Margin="10" VerticalAlignment="Center"/>
-            
-            <TextBox x:Name="tbpassword" Text="Password" FontSize="16" Margin="10"/>
-            
-            <Button x:Name="Autoriz" Content="Enter" Margin="10" Click="Autoriz_Click"/>
+
+            <Label Content="Login" HorizontalAlignment="Center" Foreground="White"/>
+            <TextBox x:Name="tblogin"  FontSize="16" Margin="1" Background="#606060" Foreground="White"/>
+            <Label Content="Password" HorizontalAlignment="Center" Foreground="White"/>
+            <PasswordBox x:Name="pbpassword" FontSize="16" Margin="1" Background="#606060" Foreground="White" PasswordChar="•"/>
+
+            <Button x:Name="Autoriz" Content="Enter" Margin="10" Click="Autoriz_Click" Background="#606060" Foreground="White"/>
             
         </StackPanel>
     </Grid>
